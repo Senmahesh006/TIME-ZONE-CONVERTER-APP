@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="150dp"
+        tools:ignore="MissingConstraints">
+
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter date (YYYY-MM-DD)" />
+
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextDate"
+            android:hint="Enter time (HH:MM)" />
+
+        <Spinner
+            android:id="@+id/spinnerTimeZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextTime"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerTimeZone"
+            android:layout_alignStart="@+id/spinnerTimeZone"
+            android:layout_alignEnd="@+id/spinnerTimeZone"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="-2dp"
+            android:text="Select Time Zone to Convert"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <Spinner
+            android:id="@+id/spinnerTimeZone1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_alignEnd="@+id/textView"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/buttonConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerTimeZone1"
+            android:layout_marginTop="33dp"
+            android:text="Convert and Compare" />
+
+
+        <TextView
+            android:id="@+id/textViewResult3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonConvert"
+            android:layout_marginTop="52dp"
+            android:text="Here The Convert Time"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textViewResult4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonConvert"
+            android:layout_marginTop="15dp"
+            android:text="Here The Convert Time"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewResult3"
+            android:layout_marginTop="13dp"
+            android:text="Here The Convert Time"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textViewResult2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewResult"
+            android:layout_alignEnd="@+id/textViewResult"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="6dp"
+            android:textSize="25dp"
+             />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
